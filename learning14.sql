@@ -69,4 +69,14 @@ SELECT e1.first_name AS employee_name1,
 FROM employees4 e1 JOIN employees4 e2
 ON e1.department_id=e2.department_id AND e1.employee_id!=e2.employee_id;
 
+SELECT e1.first_name AS employee_name1,
+       e2.first_name AS employee_name2,
+	   d.department_name
+FROM employees4 e1 JOIN employees4 e2
+ON e1.department_id=e2.department_id AND e1.employee_id!=e2.employee_id
+JOIN 
+departments d 
+ON 
+e1.department_id=d.department_id;
+
 
